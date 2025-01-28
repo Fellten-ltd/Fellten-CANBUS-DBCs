@@ -63,6 +63,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Contactor_Closure_Request : 0|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ LV12VBatVoltage : 0|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
  SG_ DCDC_Protect_Command : 0|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ IsolationRelayOverride : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 859 BmsStatus2: 4 BMS
  SG_ BMSFlag_MPO4 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
@@ -95,10 +96,6 @@ BO_ 874 CCSStatus: 8 CCS_Controller
  SG_ HVILFault : 2|1@1+ (1,0) [0|1] ""  BMS
  SG_ CCSContactorFault : 1|1@1+ (1,0) [0|1] ""  BMS
  SG_ HVPreChargeFault : 0|1@1+ (1,0) [0|1] ""  BMS
-
-BO_ 855 BMSCCSCommands: 3 CCS_Controller
- SG_ ACCurrentLimit : 8|16@1+ (1,0) [0|65535] ""  BMS
- SG_ IsolationRelayOverride : 0|1@1+ (1,0) [0|1] ""  BMS
 
 BO_ 858 BmsErrors: 4 BMS
  SG_ P0A06_ChgLimitEnforceFault : 31|1@1+ (1,0) [0|1] ""  CCS_Controller
@@ -192,6 +189,8 @@ BO_ 2566869221 Charger_Feedback: 8 OBCharger
 
 
 CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 IsolationRelayOverride "0=BMS Isolation monitoring on
+1=BMS Isolation monitoring off";
 CM_ SG_ 874 InletFault "0 = OK
 1 = Fault";
 CM_ SG_ 874 HVPresent "1 = Precharge ok, hv present
@@ -202,8 +201,6 @@ CM_ SG_ 874 PlugPresent "0 = No Plug Present
 1 = Plug Present";
 CM_ SG_ 874 ChargeMode "0 = AC Charging
 1 = DC Fastcharge";
-CM_ SG_ 855 IsolationRelayOverride "0=BMS Isolation monitoring on
-1=BMS Isolation monitoring off";
 CM_ SG_ 854 HvBatteryCurrent "Negative current for charging";
 BA_DEF_ SG_  "SPN" INT 0 524287;
 BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
@@ -315,34 +312,31 @@ BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
 BA_DEF_DEF_  "DatabaseVersion" "";
 BA_DEF_DEF_  "Baudrate" 500000;
 BA_DEF_DEF_  "BusType" "CAN";
-BA_ "ProtocolType" "CAN";
 BA_ "BusType" "CAN";
+BA_ "ProtocolType" "CAN";
 BA_ "DBName" "ZeroEv";
 BA_ "NmStationAddress" BU_ CCS_Controller 2;
 BA_ "NmStationAddress" BU_ BMS 1;
 BA_ "NmStationAddress" BU_ DCDC 3;
 BA_ "NmStationAddress" BU_ OBCharger 4;
-BA_ "VFrameFormat" BO_ 859 0;
-BA_ "GenMsgCycleTime" BO_ 859 500;
 BA_ "GenMsgSendType" BO_ 859 0;
-BA_ "GenMsgSendType" BO_ 874 0;
-BA_ "GenMsgCycleTime" BO_ 874 500;
+BA_ "GenMsgCycleTime" BO_ 859 500;
+BA_ "VFrameFormat" BO_ 859 0;
 BA_ "VFrameFormat" BO_ 874 0;
-BA_ "GenMsgSendType" BO_ 855 0;
-BA_ "GenMsgCycleTime" BO_ 855 200;
-BA_ "VFrameFormat" BO_ 855 0;
-BA_ "GenMsgSendType" BO_ 858 0;
-BA_ "GenMsgCycleTime" BO_ 858 500;
+BA_ "GenMsgCycleTime" BO_ 874 500;
+BA_ "GenMsgSendType" BO_ 874 0;
 BA_ "VFrameFormat" BO_ 858 0;
-BA_ "GenMsgSendType" BO_ 854 0;
-BA_ "GenMsgCycleTime" BO_ 854 100;
+BA_ "GenMsgCycleTime" BO_ 858 500;
+BA_ "GenMsgSendType" BO_ 858 0;
 BA_ "VFrameFormat" BO_ 854 0;
-BA_ "GenMsgSendType" BO_ 853 0;
-BA_ "GenMsgCycleTime" BO_ 853 100;
+BA_ "GenMsgCycleTime" BO_ 854 100;
+BA_ "GenMsgSendType" BO_ 854 0;
 BA_ "VFrameFormat" BO_ 853 0;
-BA_ "GenMsgSendType" BO_ 849 0;
-BA_ "GenMsgCycleTime" BO_ 849 100;
+BA_ "GenMsgCycleTime" BO_ 853 100;
+BA_ "GenMsgSendType" BO_ 853 0;
 BA_ "VFrameFormat" BO_ 849 0;
+BA_ "GenMsgCycleTime" BO_ 849 100;
+BA_ "GenMsgSendType" BO_ 849 0;
 BA_ "VFrameFormat" BO_ 2566869222 3;
 BA_ "VFrameFormat" BO_ 2550588917 3;
 BA_ "VFrameFormat" BO_ 2550173648 3;
