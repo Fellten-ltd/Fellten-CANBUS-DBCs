@@ -1,0 +1,291 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU MCU ICU BMS OBC DCDC NASA EPS
+
+
+BO_ 2365524207 VCU_Command1: 8 VCU
+ SG_ MCU_Enable : 0|1@1+ (1,0) [0|1] ""  MCU
+ SG_ Fault_Reset : 1|1@1+ (1,0) [0|1] ""  MCU
+ SG_ Control_Mode : 2|2@1+ (1,0) [0|3] ""  MCU
+ SG_ Gear : 4|2@1+ (1,0) [0|3] ""  MCU
+ SG_ Footbrake : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Handbrake : 7|1@1+ (1,0) [0|1] ""  MCU
+ SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (1,0) [0|16384] "Nm/rpm"  MCU
+ SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (1,0) [0|16384] "Nm/rpm"  MCU
+ SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm"  MCU
+ SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm"  MCU
+
+BO_ 2365521928 MCU_Status_1: 8 MCU
+ SG_ Motor_Speed : 0|16@1+ (1,-15000) [-15000|15000] "rpm"  VCU
+ SG_ Motor_Torque : 16|16@1+ (1,-5000) [-5000|5000] "Nm"  VCU
+ SG_ Motor_AC_Current : 32|16@1+ (0.1,0) [0|1000] "A"  VCU
+ SG_ Precharge_Allow : 52|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|1] ""  VCU
+ SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Live_counter1 : 60|4@1+ (1,0) [0|15] ""  VCU
+
+BO_ 2365522184 MCU_Status_2: 8 MCU
+ SG_ Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "℃"  VCU
+ SG_ MCU_Temperature : 8|8@1+ (1,-40) [-40|215] "℃"  VCU
+ SG_ Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm"  VCU
+ SG_ Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm"  VCU
+ SG_ Fail_Grade : 48|4@1+ (1,0) [0|4] ""  VCU
+ SG_ Live_counter2 : 60|4@1+ (1,0) [0|15] ""  VCU
+
+BO_ 2365522440 MCU_Status_3: 8 MCU
+ SG_ DTC_Code3 : 0|16@1+ (1,0) [0|1] ""  VCU
+ SG_ DC_Current : 16|16@1+ (1,-1000) [-1000|1000] ""  VCU
+ SG_ DC_Voltage : 32|16@1+ (0.1,0) [0|1000] "V"  VCU
+ SG_ Motor_rotation_count : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ Live_counter3 : 60|4@1+ (1,0) [0|15] ""  VCU
+
+BO_ 2365522696 MCU_Status_4: 8 MCU
+ SG_ HardDriveFaultFlag : 0|1@1+ (1,0) [0|1] ""  VCU
+ SG_ HardOverCurrentFlag : 1|1@1+ (1,0) [0|1] ""  VCU
+ SG_ VolPiOutFaultFlag : 2|1@1+ (1,0) [0|1] ""  VCU
+ SG_ FanFaultFlag : 3|1@1+ (1,0) [0|1] ""  VCU
+ SG_ WaterPressFlag : 4|1@1+ (1,0) [0|1] ""  VCU
+ SG_ HallErrFlag : 5|1@1+ (1,0) [0|1] ""  VCU
+ SG_ LockedRotorAlarm_Flag : 6|1@1+ (1,0) [0|1] ""  VCU
+ SG_ LowPowerSupplyAlarm : 7|1@1+ (1,0) [0|1] ""  VCU
+ SG_ OverCurFlag : 8|1@1+ (1,0) [0|1] ""  VCU
+ SG_ HW_OverVolAlarmFlag : 9|1@1+ (1,0) [0|1] ""  VCU
+ SG_ HW_AllErrorAlarmFlag : 10|1@1+ (1,0) [0|1] ""  VCU
+ SG_ OverVolFlag : 11|1@1+ (1,0) [0|1] ""  VCU
+ SG_ LowVolFlag : 12|1@1+ (1,0) [0|1] ""  VCU
+ SG_ OverModTempFlag : 13|1@1+ (1,0) [0|1] ""  VCU
+ SG_ ModTemHighAlarm_Flag : 14|1@1+ (1,0) [0|1] ""  VCU
+ SG_ OverRpmFlag : 15|1@1+ (1,0) [0|1] ""  VCU
+ SG_ LosePhaseFlag : 16|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MotTemHighAlarm_Flag : 17|1@1+ (1,0) [0|1] ""  VCU
+ SG_ OverMotTempFlag : 18|1@1+ (1,0) [0|1] ""  VCU
+ SG_ MotCanErr : 19|1@1+ (1,0) [0|1] ""  VCU
+ SG_ RdcFaultFlag : 20|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Active_Discharge_Error : 21|1@1+ (1,0) [0|1] ""  VCU
+
+
+
+CM_ SG_ 2365524207 MCU_Enable "电机控制单元使能";
+CM_ SG_ 2365524207 Fault_Reset "用于清除控制器的故障";
+CM_ SG_ 2365524207 Control_Mode "控制模式";
+CM_ SG_ 2365524207 Gear "档位";
+CM_ SG_ 2365524207 Footbrake "脚刹状态";
+CM_ SG_ 2365524207 Handbrake "手刹状态";
+CM_ SG_ 2365524207 Demand_Limit_High_Positive_Value "转矩/转速指令限值上限";
+CM_ SG_ 2365524207 Demand_Limit_Low_Negative_Value "转矩/转速指令限值下限";
+CM_ SG_ 2365524207 Demand_Torque "转矩";
+CM_ SG_ 2365524207 Demand_Speed "转速";
+CM_ SG_ 2365521928 Motor_Speed "电机转速";
+CM_ SG_ 2365521928 Motor_Torque "电机扭矩";
+CM_ SG_ 2365521928 Motor_AC_Current "交流侧电流有效值反馈";
+CM_ SG_ 2365521928 Precharge_Allow "允许预充电";
+CM_ SG_ 2365521928 Active_Discharge_Enable_Feedback "主动放电反馈";
+CM_ SG_ 2365521928 IGBT_Enable_Feedback "IGBT使能状态反馈";
+CM_ SG_ 2365521928 Live_counter1 "循环计数器";
+CM_ SG_ 2365522184 Motor_Temperature "电机本体温度";
+CM_ SG_ 2365522184 MCU_Temperature "电机控制器温度";
+CM_ SG_ 2365522184 Torque_Limit_High "转矩上限";
+CM_ SG_ 2365522184 Torque_Limit_Low "转矩下限";
+CM_ SG_ 2365522184 Fail_Grade "故障等级";
+CM_ SG_ 2365522184 Live_counter2 "循环计数器";
+CM_ SG_ 2365522440 DTC_Code3 "故障代码3";
+CM_ SG_ 2365522440 DC_Current "直流电流";
+CM_ SG_ 2365522440 DC_Voltage "直流电压";
+CM_ SG_ 2365522440 Motor_rotation_count "电机圈数";
+CM_ SG_ 2365522440 Live_counter3 "循环计数器";
+CM_ SG_ 2365522696 HardDriveFaultFlag "硬件驱动故障";
+CM_ SG_ 2365522696 HardOverCurrentFlag "硬件过流故障";
+CM_ SG_ 2365522696 VolPiOutFaultFlag "零位偏移故障";
+CM_ SG_ 2365522696 FanFaultFlag "风扇故障";
+CM_ SG_ 2365522696 WaterPressFlag "温差故障";
+CM_ SG_ 2365522696 HallErrFlag "交流霍尔故障";
+CM_ SG_ 2365522696 LockedRotorAlarm_Flag "堵转故障";
+CM_ SG_ 2365522696 LowPowerSupplyAlarm "低压欠压故障";
+CM_ SG_ 2365522696 OverCurFlag "软件过流故障";
+CM_ SG_ 2365522696 HW_OverVolAlarmFlag "硬件过压故障";
+CM_ SG_ 2365522696 HW_AllErrorAlarmFlag "硬件总故障";
+CM_ SG_ 2365522696 OverVolFlag "母线过压故障";
+CM_ SG_ 2365522696 LowVolFlag "母线欠压故障";
+CM_ SG_ 2365522696 OverModTempFlag "模块过温故障";
+CM_ SG_ 2365522696 ModTemHighAlarm_Flag "模块过温预警";
+CM_ SG_ 2365522696 OverRpmFlag "超速故障";
+CM_ SG_ 2365522696 LosePhaseFlag "缺相故障";
+CM_ SG_ 2365522696 MotTemHighAlarm_Flag "电机过温预警";
+CM_ SG_ 2365522696 OverMotTempFlag "电机过温故障";
+CM_ SG_ 2365522696 MotCanErr "CAN离线故障";
+CM_ SG_ 2365522696 RdcFaultFlag "编码器故障";
+CM_ SG_ 2365522696 Active_Discharge_Error "放电故障";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTimeActive" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_ BO_  "TpTxIndex" INT 0 255;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 255;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 1 65535;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrNodeIdentifier" HEX 0 255;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "no","yes";
+BA_DEF_  "NmAsrMessageCount" INT 1 256;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "no","yes";
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 1 65535;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 1 65535;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 2047;
+BA_DEF_ BU_  "ILUsed" ENUM  "no","yes";
+BA_DEF_  "ILTxTimeout" INT 0 65535;
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 65535;
+BA_DEF_ SG_  "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 65535;
+BA_DEF_ BO_  "DiagUudtResponse" ENUM  "false","true";
+BA_DEF_ BO_  "DiagUudResponse" ENUM  "False","True";
+BA_DEF_ BO_  "DiagState" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigCycleTimeActive" 0;
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "Manufacturer" "Vector";
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "NodeLayerModules" " ";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 1500;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 2000;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 3200;
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 50;
+BA_DEF_DEF_  "NmAsrNode" "no";
+BA_DEF_DEF_  "NmAsrMessageCount" 128;
+BA_DEF_DEF_  "NmAsrMessage" "no";
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 320;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 640;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrBaseAddress" 1280;
+BA_DEF_DEF_  "ILUsed" "no";
+BA_DEF_DEF_  "ILTxTimeout" 0;
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "GenSigTimeoutTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "no";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "DiagUudtResponse" "false";
+BA_DEF_DEF_  "DiagUudResponse" "False";
+BA_DEF_DEF_  "DiagState" "no";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "DBName" "";
+BA_ "Manufacturer" "Vector";
+BA_ "NmType" "NmAsr";
+BA_ "BusType" "CAN";
+BA_ "Baudrate" 500000;
+BA_ "NmAsrWaitBusSleepTime" 2000;
+BA_ "DBName" "Zonic 120 DBC";
+BA_ "GenMsgSendType" BO_ 2365524207 0;
+BA_ "GenMsgCycleTime" BO_ 2365524207 10;
+BA_ "GenMsgSendType" BO_ 2365521928 0;
+BA_ "GenMsgCycleTime" BO_ 2365521928 10;
+BA_ "GenMsgSendType" BO_ 2365522184 0;
+BA_ "GenMsgCycleTime" BO_ 2365522184 50;
+BA_ "GenMsgSendType" BO_ 2365522440 0;
+BA_ "GenMsgCycleTime" BO_ 2365522440 100;
+BA_ "GenMsgSendType" BO_ 2365522696 0;
+BA_ "GenMsgCycleTime" BO_ 2365522696 100;
+BA_ "GenSigStartValue" SG_ 2365524207 MCU_Enable 0;
+BA_ "GenSigStartValue" SG_ 2365521928 Motor_Speed 15000;
+BA_ "GenSigStartValue" SG_ 2365521928 Motor_Torque 5000;
+BA_ "GenSigStartValue" SG_ 2365522184 Motor_Temperature 40;
+BA_ "GenSigStartValue" SG_ 2365522440 DTC_Code3 0;
+BA_ "GenSigStartValue" SG_ 2365522696 HardDriveFaultFlag 0;
+VAL_ 2365524207 MCU_Enable 1 "enable" 0 "disable" ;
+VAL_ 2365524207 Fault_Reset 1 "enable" 0 "disable" ;
+VAL_ 2365524207 Control_Mode 3 "Active Discharge" 2 "Torque Control" 1 "Speed Control" 0 "Reserved" ;
+VAL_ 2365524207 Gear 2 "R" 1 "D" 0 "N" ;
+VAL_ 2365524207 Footbrake 1 "Valid" 0 "Invalid" ;
+VAL_ 2365524207 Handbrake 1 "Valid" 0 "Invalid" ;
+VAL_ 2365521928 Precharge_Allow 1 "enable" 0 "disable" ;
+VAL_ 2365521928 Active_Discharge_Enable_Feedback 1 "enable" 0 "disable" ;
+VAL_ 2365521928 IGBT_Enable_Feedback 1 "enable" 0 "disable" ;
+VAL_ 2365522184 Fail_Grade 4 "Serious Fault(need to stop the vehicle)" 3 "Fault(shut down MCU)" 2 "Fault(limit torque output)" 1 "Warning(continue)" 0 "No Fault" ;
+VAL_ 2365522696 HardDriveFaultFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 HardOverCurrentFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 VolPiOutFaultFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 FanFaultFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 WaterPressFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 HallErrFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 LockedRotorAlarm_Flag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 LowPowerSupplyAlarm 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 OverCurFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 HW_OverVolAlarmFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 HW_AllErrorAlarmFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 OverVolFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 LowVolFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 OverModTempFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 ModTemHighAlarm_Flag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 OverRpmFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 LosePhaseFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 MotTemHighAlarm_Flag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 OverMotTempFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 MotCanErr 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 RdcFaultFlag 1 "Fault" 0 "OK" ;
+VAL_ 2365522696 Active_Discharge_Error 1 "Fault" 0 "OK" ;
+

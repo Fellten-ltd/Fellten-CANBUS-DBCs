@@ -1,0 +1,193 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU Inverter
+VAL_TABLE_ YesNo 1 "Yes" 0 "No" ;
+VAL_TABLE_ Failgrade 4 "Serious Fault" 3 "Fault - MCU Shutdown" 2 "Fault - Zero Torque" 1 "Warning" 0 "No Fault" ;
+VAL_TABLE_ Gear 2 "Reverse" 1 "Drive" 0 "Neutral" ;
+VAL_TABLE_ ControlMode 3 "Active Discharge" 2 "Torque Control" 1 "Speed Control" 0 "Reserved" ;
+
+
+BO_ 2365522697 TM_MCU_STATUS4: 8 Inverter
+ SG_ LiveCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2365522441 TM_MCU_STATUS3: 8 Inverter
+ SG_ LiveCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ MotorRotationCount : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DC_Voltage : 32|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ DC_Current : 16|16@1+ (1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ DTC_ControllerOvervoltWarn : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_ControllerUndervoltageWarn : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_MotorOverTempWarning : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_ControllerOverTempWarning : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_12VUndervoltage : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_DCUnderVoltageFault : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTCHardwareFault : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_CANCommsFault : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_MotorTempSensorFault : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DTC_ResolverFault : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_ControllerOvertemp : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_MotorOvertemp : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_Overspeed : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_AC_Overcurrent : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_DC_Overvoltage : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2365522185 TM_MCU_STATUS2: 8 Inverter
+ SG_ LiveCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FailGrade : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TorqueLimit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm" Vector__XXX
+ SG_ TorqueLimit_High : 16|16@1+ (1,0) [0|5000] "Nm" Vector__XXX
+ SG_ MCUTemperature : 8|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ MotorTemperature : 0|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2365521929 TM_MCU_STATUS1: 8 Inverter
+ SG_ LiveCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Precharge_Allow : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MotorACCurrent : 32|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ MotorTorque : 16|16@1+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ MotorSpeed : 0|16@1+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
+
+BO_ 2365524463 TM_HCU_Command: 8 VCU
+ SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
+ SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (4,0) [0|4095] "RPM" Vector__XXX
+ SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (4,0) [0|4095] "RPM" Vector__XXX
+ SG_ Handbrake : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FootBrake : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gear : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Control_Mode : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FaultReset : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Enable : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2365522696 ISG_MCU_STATUS4: 8 Inverter
+ SG_ LiveCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2365522440 ISG_MCU_STATUS3: 8 Inverter
+ SG_ LiveCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ MotorRotationCount : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DC_Voltage : 32|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ DC_Current : 16|16@1+ (1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ DTC_ControllerOvervoltWarn : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_ControllerUndervoltageWarn : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_MotorOverTempWarning : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_ControllerOverTempWarning : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_12VUndervoltage : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_DCUnderVoltageFault : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTCHardwareFault : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_CANCommsFault : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_MotorTempSensorFault : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DTC_ResolverFault : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_MotorOvertemp : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_ControllerOvertemp : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_Overspeed : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_AC_Overcurrent : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DTC_DC_Overvoltage : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2365522184 ISG_MCU_STATUS2: 8 Inverter
+ SG_ LiveCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FailGrade : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TorqueLimit_Low : 32|16@1+ (1,-5000) [-5000|0] "Nm" Vector__XXX
+ SG_ TorqueLimit_High : 16|16@1+ (1,0) [0|5000] "Nm" Vector__XXX
+ SG_ MCUTemperature : 8|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ MotorTemperature : 0|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2365521928 ISG_MCU_STATUS1: 8 Inverter
+ SG_ LiveCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Active_Discharge_Enable_Feedback : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Precharge_Allow : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MotorACCurrent : 32|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ MotorTorque : 16|16@1+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ MotorSpeed : 0|16@1+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
+
+BO_ 2365524207 ISG_HCU_Command: 8 VCU
+ SG_ Demand_Speed : 48|16@1+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
+ SG_ Demand_Torque : 32|16@1+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ Demand_Limit_Low_Negative_Value : 20|12@1+ (4,0) [0|4095] "RPM" Vector__XXX
+ SG_ Demand_Limit_High_Positive_Value : 8|12@1+ (4,0) [0|4095] "RPM" Vector__XXX
+ SG_ Handbrake : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FootBrake : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gear : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Control_Mode : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FaultReset : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Enable : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ SG_ 2365524463 Demand_Limit_Low_Negative_Value "Nm/RPM Depending on control mode";
+CM_ SG_ 2365524463 Demand_Limit_High_Positive_Value "Nm/RPM Depending on control mode";
+CM_ SG_ 2365524463 MCU_Enable "Enables IGBT. Only enable after precharge completed.";
+CM_ SG_ 2365524207 Demand_Limit_Low_Negative_Value "Nm/RPM Depending on control mode";
+CM_ SG_ 2365524207 Demand_Limit_High_Positive_Value "Nm/RPM Depending on control mode";
+CM_ SG_ 2365524207 MCU_Enable "Enables IGBT. Only enable after precharge completed.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2365522441 DTC_ControllerOvervoltWarn 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_ControllerUndervoltageWarn 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_MotorOverTempWarning 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_ControllerOverTempWarning 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_12VUndervoltage 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_DCUnderVoltageFault 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTCHardwareFault 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_CANCommsFault 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_MotorTempSensorFault 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_ResolverFault 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_ControllerOvertemp 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_MotorOvertemp 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_Overspeed 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_AC_Overcurrent 1 "Yes" 0 "No" ;
+VAL_ 2365522441 DTC_DC_Overvoltage 1 "Yes" 0 "No" ;
+VAL_ 2365522185 FailGrade 4 "Serious Fault" 3 "Fault - MCU Shutdown" 2 "Fault - Zero Torque" 1 "Warning" 0 "No Fault" ;
+VAL_ 2365524463 Control_Mode 3 "Active Discharge" 2 "Torque Control" 1 "Speed Control" 0 "Reserved" ;
+VAL_ 2365522440 DTC_ControllerOvervoltWarn 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_ControllerUndervoltageWarn 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_MotorOverTempWarning 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_ControllerOverTempWarning 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_12VUndervoltage 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_DCUnderVoltageFault 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTCHardwareFault 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_CANCommsFault 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_MotorTempSensorFault 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_ResolverFault 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_MotorOvertemp 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_ControllerOvertemp 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_Overspeed 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_AC_Overcurrent 1 "Yes" 0 "No" ;
+VAL_ 2365522440 DTC_DC_Overvoltage 1 "Yes" 0 "No" ;
+VAL_ 2365522184 FailGrade 4 "Serious Fault" 3 "Fault - MCU Shutdown" 2 "Fault - Zero Torque" 1 "Warning" 0 "No Fault" ;
+VAL_ 2365524207 Control_Mode 3 "Active Discharge" 2 "Torque Control" 1 "Speed Control" 0 "Reserved" ;
+
