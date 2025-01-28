@@ -1,0 +1,134 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ Yes_No 255 "Yes" 0 "NO" ;
+VAL_TABLE_ On_Off 1 "On" 0 "Off" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ MPI_1 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1032 SSR_Master_Output: 8 Vector__XXX
+ SG_ TotalAmperage : 16|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ Power : 32|16@1+ (0.1,0) [0|6553.5] "W" Vector__XXX
+ SG_ Voltage : 8|8@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ Temperature : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 1030 SSR_Output_4: 8 Vector__XXX
+ SG_ NoOutput : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OverTemp : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OverCurrent : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PWM_Request : 40|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Amperage : 16|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Voltage : 8|8@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ Temperature : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Power : 24|16@1+ (0.1,0) [0|6553.5] "W" Vector__XXX
+
+BO_ 1031 SSR_Input_4: 8 Vector__XXX
+ SG_ Current_Override : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Max_Current : 8|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ PWM_Request : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 1029 SSR_Input_3: 8 Vector__XXX
+ SG_ Current_Override : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Max_Current : 8|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ PWM_Request : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 1028 SSR_Output_3: 8 Vector__XXX
+ SG_ NoOutput : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OverTemp : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OverCurrent : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PWM_Request : 40|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Amperage : 16|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Voltage : 8|8@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ Temperature : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Power : 24|16@1+ (0.1,0) [0|6553.5] "W" Vector__XXX
+
+BO_ 1026 SSR_Output_2: 8 Vector__XXX
+ SG_ NoOutput : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OverTemp : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OverCurrent : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PWM_Request : 40|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Amperage : 16|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Voltage : 8|8@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ Temperature : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Power : 24|16@1+ (0.1,0) [0|6553.5] "W" Vector__XXX
+
+BO_ 1027 SSR_Input_2: 8 Vector__XXX
+ SG_ Current_Override : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Max_Current : 8|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ PWM_Request : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 1025 SSR_Input_1: 8 Vector__XXX
+ SG_ PWM_Request : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Current_Override : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Max_Current : 8|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+
+BO_ 1024 SSR_Output_1: 8 Vector__XXX
+ SG_ NoOutput : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OverTemp : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Power : 24|16@1+ (0.1,0) [0|6553.5] "W" Vector__XXX
+ SG_ OverCurrent : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PWM_Request : 40|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Amperage : 16|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Voltage : 8|8@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ Temperature : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "MultiplexExtEnabled" "No";
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 3221225472 MPI_1 1 "On" 0 "Off" ;
+VAL_ 1030 NoOutput 255 "Yes" 0 "NO" ;
+VAL_ 1030 OverTemp 255 "Yes" 0 "NO" ;
+VAL_ 1030 OverCurrent 255 "Yes" 0 "NO" ;
+VAL_ 1031 Current_Override 1 "On" 0 "Off" ;
+VAL_ 1029 Current_Override 1 "On" 0 "Off" ;
+VAL_ 1028 NoOutput 255 "Yes" 0 "NO" ;
+VAL_ 1028 OverTemp 255 "Yes" 0 "NO" ;
+VAL_ 1028 OverCurrent 255 "Yes" 0 "NO" ;
+VAL_ 1026 NoOutput 255 "Yes" 0 "NO" ;
+VAL_ 1026 OverTemp 255 "Yes" 0 "NO" ;
+VAL_ 1026 OverCurrent 255 "Yes" 0 "NO" ;
+VAL_ 1027 Current_Override 1 "On" 0 "Off" ;
+VAL_ 1025 Current_Override 1 "On" 0 "Off" ;
+VAL_ 1024 NoOutput 255 "Yes" 0 "NO" ;
+VAL_ 1024 OverTemp 255 "Yes" 0 "NO" ;
+VAL_ 1024 OverCurrent 255 "Yes" 0 "NO" ;
+

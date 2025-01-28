@@ -1,0 +1,533 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 369 Slave_1_CG_Accelerometer: 8 Vector__XXX
+ SG_ Xg : 0|16@1- (0.00073125,0) [-23.9616|23.96086875] "g" Vector__XXX
+ SG_ Yg : 16|16@1- (0.00073125,0) [-23.9616|23.96086875] "g" Vector__XXX
+ SG_ Fault_Accelerometer_Init : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Accelerometer_Read : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Accelerometer : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Xg_Over_g_Wrn : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Xg_Under_g_Wrn : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Yg_Over_g_Wrn : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Yg_Under_g_Wrn : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Zg_Over_g_Wrn : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Zg_Under_g_Wrn : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Accelerometer_Self_Test : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Zg : 32|16@1- (0.00073125,0) [-23.9616|23.96086875] "g" Vector__XXX
+
+BO_ 368 Slave_1_CG_Pressure: 5 Vector__XXX
+ SG_ Absolute_Pressure : 0|32@1+ (0.001,0) [0|4294967.295] "mBar" Vector__XXX
+ SG_ Fault_Pressure_Last_Update : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Pressure_Sensor_Comms : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_Pressure : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 367 Slave_1_CG_Moisture_and_Temp: 8 Vector__XXX
+ SG_ Air_Temperature : 24|8@1+ (1,-40) [-40|215] "deg C" Vector__XXX
+ SG_ Absolute_Humidity : 0|16@1+ (1,0) [0|65535] "mg/m^3" Vector__XXX
+ SG_ Dew_Point_Temperature : 32|8@1+ (0.5,0) [0|127.5] "deg C" Vector__XXX
+ SG_ Relative_Humidity : 16|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ Fault_Humidity_Chk_Sum : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Humidity_Cmd : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Humidity_Rst_Detected : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Humidity_Sensor_Comms : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_RH : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_Dew_Point : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_Temperature : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 366 Slave_CG_VOC: 8 Vector__XXX
+ SG_ Gas_Raw_ADC : 0|16@1+ (1,0) [0|65535] "count" Vector__XXX
+ SG_ VOC_Calculated_ppm : 16|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ Fault_Gas_Sensor_Error_Code : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VOC_ppm_Ready : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_VOC : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_Gas_Raw : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 781 CG_Pressure: 5 Vector__XXX
+ SG_ Absolute_Pressure : 0|32@1+ (0.001,0) [0|4294967.295] "mBar" Vector__XXX
+ SG_ Fault_Pressure_Last_Update : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Pressure_Sensor_Comms : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_Pressure : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 780 CG_Moisture_and_Temp: 8 Vector__XXX
+ SG_ Air_Temperature : 24|8@1+ (1,-40) [-40|215] "deg C" Vector__XXX
+ SG_ Absolute_Humidity : 0|16@1+ (1,0) [0|65535] "mg/m^3" Vector__XXX
+ SG_ Dew_Point_Temperature : 32|8@1+ (0.5,0) [0|127.5] "deg C" Vector__XXX
+ SG_ Relative_Humidity : 16|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ Fault_Humidity_Chk_Sum : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Humidity_Cmd : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Humidity_Rst_Detected : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Humidity_Sensor_Comms : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_RH : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_Dew_Point : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_Temperature : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 779 CG_VOC: 8 Vector__XXX
+ SG_ Gas_Raw_ADC : 0|16@1+ (1,0) [0|65535] "count" Vector__XXX
+ SG_ VOC_Calculated_ppm : 16|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ Fault_Gas_Sensor_Error_Code : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VOC_ppm_Ready : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_VOC : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag_Gas_Raw : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 778 CG_Config: 8 Vector__XXX
+ SG_ CG_Config_Mux M : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unique_ID : 0|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ Key0 m0 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Unit_ID0 m0 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Fault_Gas m0 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Humidity m0 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mode m0 : 48|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_EEPROM m0 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Pressure m0 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Flag m0 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Accelerometer m0 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Key1 m1 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Key2 m2 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Key4 m4 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ CAN_Bus_Speed12 m12 : 32|8@1+ (1,0) [0|255] "kbps" Vector__XXX
+ SG_ CAN_Start_Address15 m15 : 32|11@1+ (1,0) [0|2047] "" Vector__XXX
+ SG_ CAN_Bus_Speed13 m13 : 32|8@1+ (1,0) [0|255] "kbps" Vector__XXX
+ SG_ CAN_Start_Address16 m16 : 32|11@1+ (1,0) [0|2047] "" Vector__XXX
+ SG_ Sensor_Mode18 m18 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Key18 m18 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Sensor_Mode19 m19 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Key5 m5 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Update_Rate_Milliseconds49 m49 : 32|16@1+ (1,0) [0|65535] "milliseconds" Vector__XXX
+ SG_ Update_Rate_Milliseconds50 m50 : 32|16@1+ (1,0) [0|65535] "milliseconds" Vector__XXX
+ SG_ Update_Rate_Milliseconds52 m52 : 32|16@1+ (1,0) [0|65535] "milliseconds" Vector__XXX
+ SG_ Update_Rate_Milliseconds53 m53 : 32|16@1+ (1,0) [0|65535] "milliseconds" Vector__XXX
+ SG_ Update_Rate_Milliseconds55 m55 : 32|16@1+ (1,0) [0|65535] "milliseconds" Vector__XXX
+ SG_ Update_Rate_Milliseconds56 m56 : 32|16@1+ (1,0) [0|65535] "milliseconds" Vector__XXX
+ SG_ Message_On_Off61 m61 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Message_On_Off62 m62 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Message_On_Off64 m64 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Message_On_Off65 m65 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Message_On_Off67 m67 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Message_On_Off68 m68 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Unit_ID9 m9 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Unit_ID10 m10 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Stats_Pwr_Cycle_Cnt m24 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ Firmware_Major_Version m23 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Firmware_Minor_Version m23 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Stats_EEPROM_Write_Cnt m26 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ Stats_MCU_IntWD_Rst_Cnt m27 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Stats_MCU_Last_Rst_Reas m27 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Stats_MCU_Panic_Rst_Cnt m27 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Stats_MCU_TaskWD_Rst_Cnt m27 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Stats_CAN_Tran_Err_Cnt m28 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Stats_CAN_Tran_Last_Err_Code m28 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VOC_Raw_ADC_Baseline70 m70 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VOC_Raw_ADC_Baseline72 m72 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Alert_Pressure_Max74 m74 : 32|8@1+ (5,0) [0|1275] "mBar" Vector__XXX
+ SG_ Alert_Pressure_Min74 m74 : 40|8@1+ (5,0) [0|1275] "mBar" Vector__XXX
+ SG_ Alert_Pressure_Change74 m74 : 48|8@1+ (10,-1275) [-1275|1275] "mBar" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max74 m74 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min74 m74 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change74 m74 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO74 m74 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Pressure_Max75 m75 : 32|8@1+ (5,0) [0|1275] "mBar" Vector__XXX
+ SG_ Alert_Pressure_Min75 m75 : 40|8@1+ (5,0) [0|1275] "mBar" Vector__XXX
+ SG_ Alert_Pressure_Change75 m75 : 48|8@1+ (10,-1275) [-1275|1275] "mBar" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max75 m75 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min75 m75 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change75 m75 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO75 m75 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max77 m77 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min77 m77 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change77 m77 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO77 m77 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_VOC_Max77 m77 : 32|8@1+ (25,0) [0|6375] "ppm" Vector__XXX
+ SG_ Alert_VOC_Min77 m77 : 40|8@1+ (3,0) [0|765] "ppm" Vector__XXX
+ SG_ Alert_VOC_Change77 m77 : 48|8@1+ (6,-765) [-765|765] "ppm" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max78 m78 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min78 m78 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change78 m78 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO78 m78 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_VOC_Max78 m78 : 32|8@1+ (25,0) [0|6375] "ppm" Vector__XXX
+ SG_ Alert_VOC_Min78 m78 : 40|8@1+ (3,0) [0|765] "ppm" Vector__XXX
+ SG_ Alert_VOC_Change78 m78 : 48|8@1+ (6,-765) [-765|765] "ppm" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max80 m80 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min80 m80 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change80 m80 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO80 m80 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Gas_ADC_Max80 m80 : 32|8@1+ (250,0) [0|63750] "count" Vector__XXX
+ SG_ Alert_Gas_ADC_Min80 m80 : 40|8@1+ (250,0) [0|63750] "count" Vector__XXX
+ SG_ Alert_Gas_ADC_Change80 m80 : 48|8@1+ (250,-31875) [-31875|31875] "count" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max81 m81 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min81 m81 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change81 m81 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO81 m81 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Gas_ADC_Change81 m81 : 48|8@1+ (250,-31875) [-31875|31875] "count" Vector__XXX
+ SG_ Alert_Gas_ADC_Max81 m81 : 32|8@1+ (250,0) [0|63750] "count" Vector__XXX
+ SG_ Alert_Gas_ADC_Min81 m81 : 40|8@1+ (250,0) [0|63750] "count" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max83 m83 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min83 m83 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change83 m83 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO83 m83 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_RH_Change83 m83 : 48|8@1+ (1,-127.5) [-127.5|127.5] "%" Vector__XXX
+ SG_ Alert_RH_Max83 m83 : 32|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ Alert_RH_Min83 m83 : 40|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max84 m84 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min84 m84 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change84 m84 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO84 m84 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_RH_Change84 m84 : 48|8@1+ (1,-127.5) [-127.5|127.5] "%" Vector__XXX
+ SG_ Alert_RH_Max84 m84 : 32|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ Alert_RH_Min84 m84 : 40|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max86 m86 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min86 m86 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change86 m86 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO86 m86 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Dew_Point_Max86 m86 : 32|8@1+ (0.5,0) [0|127.5] "deg C" Vector__XXX
+ SG_ Alert_Dew_Point_Min86 m86 : 40|8@1+ (0.5,0) [0|127.5] "deg C" Vector__XXX
+ SG_ Alert_Dew_Point_Change86 m86 : 48|8@1+ (1,-127.5) [-127.5|127.5] "deg C" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max87 m87 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min87 m87 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change87 m87 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO87 m87 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Dew_Point_Max87 m87 : 32|8@1+ (0.5,0) [0|127.5] "deg C" Vector__XXX
+ SG_ Alert_Dew_Point_Min87 m87 : 40|8@1+ (0.5,0) [0|127.5] "deg C" Vector__XXX
+ SG_ Alert_Dew_Point_Change87 m87 : 48|8@1+ (1,-127.5) [-127.5|127.5] "deg C" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max89 m89 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min89 m89 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change89 m89 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO89 m89 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Air_Temp_Max89 m89 : 32|8@1+ (1,-127.5) [-127.5|127.5] "deg C" Vector__XXX
+ SG_ Alert_Air_Temp_Min89 m89 : 40|8@1+ (1,-127.5) [-127.5|127.5] "deg C" Vector__XXX
+ SG_ Alert_Air_Temp_Change89 m89 : 48|8@1+ (1,-127.5) [-127.5|127.5] "deg C" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max90 m90 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min90 m90 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change90 m90 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO90 m90 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Air_Temp_Max90 m90 : 32|8@1+ (1,-127.5) [-127.5|127.5] "deg C" Vector__XXX
+ SG_ Alert_Air_Temp_Min90 m90 : 40|8@1+ (1,-127.5) [-127.5|127.5] "deg C" Vector__XXX
+ SG_ Alert_Air_Temp_Change90 m90 : 48|8@1+ (1,-127.5) [-127.5|127.5] "deg C" Vector__XXX
+ SG_ Message_On_Off92 m92 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Message_On_Off93 m93 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VOC_Raw_ADC_Baseline95 m95 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VOC_Raw_ADC_Baseline97 m97 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max99 m99 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min99 m99 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change99 m99 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO99 m99 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_NOX_Change99 m99 : 48|8@1+ (0.004,-0.51) [-0.51|0.51] "ppm" Vector__XXX
+ SG_ Alert_NOX_Max99 m99 : 32|8@1+ (0.004,0) [0|1.02] "ppm" Vector__XXX
+ SG_ Alert_NOX_Min99 m99 : 40|8@1+ (0.004,0) [0|1.02] "ppm" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max100 m100 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min100 m100 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change100 m100 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO100 m100 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_NOX_Change100 m100 : 48|8@1+ (0.004,-0.51) [-0.51|0.51] "ppm" Vector__XXX
+ SG_ Alert_NOX_Max100 m100 : 32|8@1+ (0.004,0) [0|1.02] "ppm" Vector__XXX
+ SG_ Alert_NOX_Min100 m100 : 40|8@1+ (0.004,0) [0|1.02] "ppm" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max102 m102 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min102 m102 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change102 m102 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO102 m102 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Gas_ADC_Max102 m102 : 32|8@1+ (250,0) [0|63750] "count" Vector__XXX
+ SG_ Alert_Gas_ADC_Min102 m102 : 40|8@1+ (250,0) [0|63750] "count" Vector__XXX
+ SG_ Alert_Gas_ADC_Change102 m102 : 48|8@1+ (250,-31875) [-31875|31875] "count" Vector__XXX
+ SG_ Alert_Off_On_Latch_Max103 m103 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Min103 m103 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_Latch_Change103 m103 : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO103 m103 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Gas_ADC_Change103 m103 : 48|8@1+ (250,-31875) [-31875|31875] "count" Vector__XXX
+ SG_ Alert_Gas_ADC_Max103 m103 : 32|8@1+ (250,0) [0|63750] "count" Vector__XXX
+ SG_ Alert_Gas_ADC_Min103 m103 : 40|8@1+ (250,0) [0|63750] "count" Vector__XXX
+ SG_ Update_Rate_Milliseconds105 m105 : 32|16@1+ (1,0) [0|65535] "milliseconds" Vector__XXX
+ SG_ Update_Rate_Milliseconds106 m106 : 32|16@1+ (1,0) [0|65535] "milliseconds" Vector__XXX
+ SG_ Message_On_Off108 m108 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Message_On_Off109 m109 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Alert_Off_On_IO111 m111 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Duration111 m111 : 40|7@1+ (2.5,2.5) [2.5|320] "milliseconds" Vector__XXX
+ SG_ Accel_Threshold111 m111 : 32|7@1+ (188,0) [0|23876] "milli g" Vector__XXX
+ SG_ Accel_X_High_Trigger111 m111 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_X_Low_Trigger111 m111 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Y_High_Trigger111 m111 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Y_Low_Trigger111 m111 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Z_High_Trigger111 m111 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Z_Low_Trigger111 m111 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Latched111 m111 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Alert_Off_On_IO112 m112 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Duration112 m112 : 40|7@1+ (2.5,2.5) [2.5|320] "milliseconds" Vector__XXX
+ SG_ Accel_Threshold112 m112 : 32|7@1+ (188,0) [0|23876] "milli g" Vector__XXX
+ SG_ Accel_X_High_Trigger112 m112 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_X_Low_Trigger112 m112 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Y_High_Trigger112 m112 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Y_Low_Trigger112 m112 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Z_High_Trigger112 m112 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Accel_Z_Low_Trigger112 m112 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Latched112 m112 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 783 CG_Accelerometer: 8 Vector__XXX
+ SG_ Xg : 0|16@1- (0.00073125,0) [-23.9616|23.96086875] "g" Vector__XXX
+ SG_ Yg : 16|16@1- (0.00073125,0) [-23.9616|23.96086875] "g" Vector__XXX
+ SG_ Fault_Accelerometer_Init : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Accelerometer_Read : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alert_Accelerometer : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Xg_Over_g_Wrn : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Xg_Under_g_Wrn : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Yg_Over_g_Wrn : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Yg_Under_g_Wrn : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Zg_Over_g_Wrn : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Zg_Under_g_Wrn : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fault_Accelerometer_Self_Test : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Zg : 32|16@1- (0.00073125,0) [-23.9616|23.96086875] "g" Vector__XXX
+
+
+
+CM_ BO_ 368 "Absolute pressure 0.3 to 1.2 bar";
+CM_ SG_ 368 Fault_Pressure_Last_Update "indicates if the last requested update was successful";
+CM_ SG_ 368 Fault_Pressure_Sensor_Comms "Pressure sensor communication status";
+CM_ BO_ 367 "Moisture and temperature information";
+CM_ BO_ 366 "VOC information";
+CM_ BO_ 781 "Absolute pressure 0.3 to 1.2 bar";
+CM_ SG_ 781 Fault_Pressure_Last_Update "indicates if the last requested update was successful";
+CM_ SG_ 781 Fault_Pressure_Sensor_Comms "Pressure sensor communication status";
+CM_ BO_ 780 "Moisture and temperature information";
+CM_ BO_ 779 "VOC information";
+CM_ BO_ 778 "Heartbeat and unit configuration";
+CM_ SG_ 778 CG_Config_Mux "A heart beat to show that the unit is alive";
+CM_ SG_ 778 Stats_EEPROM_Write_Cnt "total number of times EEPROM has been writain to";
+CM_ SG_ 778 Stats_MCU_IntWD_Rst_Cnt "MCU Interrupt Watchdog reset count";
+CM_ SG_ 778 Stats_MCU_Last_Rst_Reas "Reason for the last MCU reset";
+CM_ SG_ 778 Stats_MCU_Panic_Rst_Cnt "MCU panic reset count";
+CM_ SG_ 778 Stats_MCU_TaskWD_Rst_Cnt "MCU Task Watchdog reset count";
+CM_ SG_ 778 Stats_CAN_Tran_Err_Cnt "CAN transiever error count";
+CM_ SG_ 778 Stats_CAN_Tran_Last_Err_Code "CAN transiever last error code";
+CM_ SG_ 778 VOC_Raw_ADC_Baseline70 "Set the baseline for the raw ADC value to calculate VOC ppm from";
+CM_ SG_ 778 VOC_Raw_ADC_Baseline72 "Set the baseline for the raw ADC value to calculate VOC ppm from";
+CM_ SG_ 778 VOC_Raw_ADC_Baseline95 "Set the baseline for the raw ADC value to calculate VOC ppm from";
+CM_ SG_ 778 VOC_Raw_ADC_Baseline97 "Set the baseline for the raw ADC value to calculate VOC ppm from";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 778 1000;
+BA_ "GenSigStartValue" SG_ 367 Air_Temperature 40;
+BA_ "GenSigStartValue" SG_ 367 Absolute_Humidity 50;
+BA_ "GenSigStartValue" SG_ 367 Relative_Humidity 100;
+BA_ "GenSigStartValue" SG_ 780 Air_Temperature 40;
+BA_ "GenSigStartValue" SG_ 780 Absolute_Humidity 50;
+BA_ "GenSigStartValue" SG_ 780 Relative_Humidity 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_Pressure_Max74 240;
+BA_ "GenSigStartValue" SG_ 778 Alert_Pressure_Change74 127.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Pressure_Max75 240;
+BA_ "GenSigStartValue" SG_ 778 Alert_Pressure_Change75 127.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_VOC_Max77 255;
+BA_ "GenSigStartValue" SG_ 778 Alert_VOC_Change77 127.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_VOC_Max78 255;
+BA_ "GenSigStartValue" SG_ 778 Alert_VOC_Change78 127.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Max80 160;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Min80 60;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Change80 187.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Change81 187.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Max81 160;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Min81 60;
+BA_ "GenSigStartValue" SG_ 778 Alert_RH_Change83 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_RH_Max83 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_RH_Min83 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_RH_Change84 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_RH_Max84 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_RH_Min84 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_Dew_Point_Max86 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_Dew_Point_Min86 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_Dew_Point_Change86 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Dew_Point_Max87 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_Dew_Point_Min87 100;
+BA_ "GenSigStartValue" SG_ 778 Alert_Dew_Point_Change87 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Air_Temp_Max89 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Air_Temp_Min89 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Air_Temp_Change89 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Air_Temp_Max90 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Air_Temp_Min90 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Air_Temp_Change90 227.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_NOX_Change99 252.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_NOX_Max99 125;
+BA_ "GenSigStartValue" SG_ 778 Alert_NOX_Change100 252.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_NOX_Max100 125;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Max102 160;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Min102 60;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Change102 187.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Change103 187.5;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Max103 160;
+BA_ "GenSigStartValue" SG_ 778 Alert_Gas_ADC_Min103 60;
+BA_ "GenSigStartValue" SG_ 778 Accel_Duration111 2.5;
+BA_ "GenSigStartValue" SG_ 778 Accel_Duration112 2.5;
+VAL_ 369 Fault_Accelerometer_Init 0 "OK" 1 "Fault" ;
+VAL_ 369 Fault_Accelerometer_Read 0 "OK" 1 "Fault" ;
+VAL_ 369 Fault_Accelerometer_Self_Test 0 "OK" 1 "Fault" ;
+VAL_ 368 Fault_Pressure_Last_Update 0 "OK" 1 "Fault" ;
+VAL_ 368 Fault_Pressure_Sensor_Comms 0 "OK" 1 "Fault" ;
+VAL_ 368 Alert_Flag_Pressure 0 "Off" 1 "On" ;
+VAL_ 367 Fault_Humidity_Chk_Sum 0 "OK" 1 "Fault" ;
+VAL_ 367 Fault_Humidity_Cmd 0 "OK" 1 "Fault" ;
+VAL_ 367 Humidity_Rst_Detected 0 "False" 1 "True" ;
+VAL_ 367 Fault_Humidity_Sensor_Comms 0 "OK" 1 "Fault" ;
+VAL_ 367 Alert_Flag_RH 0 "Off" 1 "On" ;
+VAL_ 367 Alert_Flag_Dew_Point 0 "Off" 1 "On" ;
+VAL_ 367 Alert_Flag_Temperature 0 "Off" 1 "On" ;
+VAL_ 366 Fault_Gas_Sensor_Error_Code 0 "OK" 256 "WriteError" 512 "ReadError" 768 "TxFrameError" 1024 "RxFrameError" 1280 "ExecutionError" 267 "Sensor Not Detected" ;
+VAL_ 366 VOC_ppm_Ready 0 "False" 1 "True" ;
+VAL_ 366 Alert_Flag_VOC 0 "Off" 1 "On" ;
+VAL_ 366 Alert_Flag_Gas_Raw 0 "Off" 1 "On" ;
+VAL_ 781 Fault_Pressure_Last_Update 0 "OK" 1 "Fault" ;
+VAL_ 781 Fault_Pressure_Sensor_Comms 0 "OK" 1 "Fault" ;
+VAL_ 781 Alert_Flag_Pressure 0 "Off" 1 "On" ;
+VAL_ 780 Fault_Humidity_Chk_Sum 0 "OK" 1 "Fault" ;
+VAL_ 780 Fault_Humidity_Cmd 0 "OK" 1 "Fault" ;
+VAL_ 780 Humidity_Rst_Detected 0 "False" 1 "True" ;
+VAL_ 780 Fault_Humidity_Sensor_Comms 0 "OK" 1 "Fault" ;
+VAL_ 780 Alert_Flag_RH 0 "Off" 1 "On" ;
+VAL_ 780 Alert_Flag_Dew_Point 0 "Off" 1 "On" ;
+VAL_ 780 Alert_Flag_Temperature 0 "Off" 1 "On" ;
+VAL_ 779 Fault_Gas_Sensor_Error_Code 0 "OK" 256 "WriteError" 512 "ReadError" 768 "TxFrameError" 1024 "RxFrameError" 1280 "ExecutionError" 267 "Sensor Not Detected" ;
+VAL_ 779 VOC_ppm_Ready 0 "False" 1 "True" ;
+VAL_ 779 Alert_Flag_VOC 0 "Off" 1 "On" ;
+VAL_ 779 Alert_Flag_Gas_Raw 0 "Off" 1 "On" ;
+VAL_ 778 CG_Config_Mux 0 "x00_Heartbeat" 1 "x01_Cmd_Enter_Setup" 2 "x02_Cmd_Save_Setup" 3 "x03_Cmd_Cancel_Setup" 4 "x04_Cmd_Rst_to_Factory_Defaults" 12 "x0C_Cmd_Set_CAN_Bus_Speed" 15 "x0F_Cmd_Set_CAN_Start_Address" 14 "x0E_Cmd_Get_CAN_Start_Address" 11 "x0B_Cmd_Get_CAN_Bus_Speed" 13 "x0D_Resp_CAN_Bus_Speed" 16 "x10_Resp_CAN_Start_Address" 17 "x11_Cmd_Get_Unit_Mode" 18 "x12_Cmd_Set_Unit_Mode" 19 "x13_Resp_Unit_Mode" 5 "x05_Cmd_Reboot_Device" 6 "x06_Cmd_Get_Info_and_Errors" 7 "x07_Cmd_Rst_Info_and_Errors" 48 "x30_Cmd_Get_Gas_Update_ms" 49 "x31_Cmd_Set_Gas_Update_ms" 50 "x32_Resp_Gas_Update_ms" 51 "x33_Cmd_Get_W_and_T_Update_ms" 52 "x34_Cmd_Set_W_and_T_Update_ms" 53 "x35_Resp_W_and_T_Update_ms" 54 "x36_Cmd_Get_Pressure_Update_ms" 55 "x37_Cmd_Set_Pressure_Update_ms" 56 "x38_Resp_Pressure_Update_ms" 60 "x3C_Cmd_Get_VOC_Msg_On" 61 "x3D_Cmd_Set_VOC_Msg_On" 62 "x3E_Resp_VOC_Msg_On" 63 "x3F_Cmd_Get_W_and_T_Msg_On" 64 "x40_Cmd_Set_W_and_T_Msg_On" 65 "x41_Resp_W_and_T_Msg_On" 66 "x42_Cmd_Get_Pressure_Msg_On" 67 "x43_Cmd_Set_Pressure_Msg_On" 68 "x44_Resp_Pressure_Msg_On" 8 "x08_Cmd_Get_Unit_ID" 9 "x09_Cmd_Set_Unit_ID" 10 "x0A_Resp_Unit_ID" 24 "x18_Resp_Pwr_Cycle_Cnt" 23 "x17_Resp_Firmware_Version" 26 "x1A_Resp_EEPROM_Write_Cnt" 27 "x1B_Resp_MCU_Stats" 28 "x1C_Resp_CAN_Tran_Stats" 69 "x45_Cmd_Get_VOC_Baseline" 70 "x46_Cmd_Set_User_VOC_Baseline" 72 "x48_Resp_VOC_Baseline" 71 "x47_Cmd_Set_Curr_VOC_Baseline" 74 "x4A_Cmd_Set_Pressure_Alert" 73 "x49_Cmd_Get_Pressure_Alert" 75 "x4B_Resp_Pressure_Alert" 76 "x4C_Cmd_Get_VOC_Alert" 77 "x4D_Cmd_Set_VOC_Alert" 78 "x4E_Resp_VOC_Alert" 32 "x20_Cmd_Clear_Latch_Alert_Flags" 33 "x21_Resp_Clear_Latch_Alert_Flags" 79 "x4F_Cmd_Get_VOC_ADC_Alert" 80 "x50_Cmd_Set_VOC_ADC_Alert" 81 "x51_Resp_VOC_ADC_Alert" 82 "x52_Cmd_Get_RH_Alert" 83 "x53_Cmd_Set_RH_Alert" 84 "x54_Resp_RH_Alert" 85 "x55_Cmd_Get_Dew_Point_Alert" 86 "x56_Cmd_Set_Dew_Point_Alert" 87 "x57_Resp_Dew_Point_Alert" 88 "x58_Cmd_Get_Air_Temp_Alert" 89 "x59_Cmd_Set_Air_Temp_Alert" 90 "x5A_Resp_Air_Temp_Alert" 91 "x5B_Cmd_Get_NOX_Msg_On" 92 "x5C_Cmd_Set_NOX_Msg_On" 93 "x5D_Resp_NOX_Msg_On" 94 "x5E_Cmd_Get_NOX_Baseline" 95 "x5F_Cmd_Set_User_NOX_Baseline" 96 "x60_Cmd_Set_Curr_NOX_Baseline" 97 "x61_Resp_NOX_Baseline" 98 "x62_Cmd_Get_Gas_NOX_Alert" 99 "x63_Cmd_Set_Gas_NOX_Alert" 100 "x64_Resp_Gas_NOX_Alert" 101 "x65_Cmd_Get_NOX_ADC_Alert" 102 "x66_Cmd_Set_NOX_ADC_Alert" 103 "x67_Resp_NOX_ADC_Alert" 29 "x1D_Resp_Cmd_Not_Recognised" 104 "x68_Cmd_Get_Accel_Update_ms" 105 "x69_Cmd_Set_Accel_Update_ms" 106 "x6A_Resp_Accel_Update_ms" 107 "x6B_Cmd_Get_Accel_Msg_On" 108 "x6C_Cmd_Set_Accel_Msg_On" 109 "x6D_Resp_Accel_Msg_On" 110 "x6E_Cmd_Get_Accel_Alert" 111 "x6F_Cmd_Set_Accel_Alert" 112 "x70_Resp_Accel_Alert" ;
+VAL_ 778 Fault_Gas 0 "OK" 1 "Fault" ;
+VAL_ 778 Fault_Humidity 0 "OK" 1 "Fault" ;
+VAL_ 778 Mode 0 "Normal Mode" 1 "Setup Mode" 2 "Silent Mode" ;
+VAL_ 778 Fault_EEPROM 0 "OK" 1 "Fault" ;
+VAL_ 778 Fault_Pressure 0 "OK" 1 "Fault" ;
+VAL_ 778 Alert_Flag 0 "Off" 1 "On" ;
+VAL_ 778 Fault_Accelerometer 0 "OK" 1 "Fault" ;
+VAL_ 778 CAN_Bus_Speed12 0 "1000 kbps" 1 "500 kbps" 2 "250 kbps" 3 "125 kbps" ;
+VAL_ 778 CAN_Bus_Speed13 0 "1000 kbps" 1 "500 kbps" 2 "250 kbps" 3 "125 kbps" ;
+VAL_ 778 Sensor_Mode18 0 "Normal" 1 "Low Power" ;
+VAL_ 778 Sensor_Mode19 0 "Normal" 1 "Low Power" ;
+VAL_ 778 Message_On_Off61 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off62 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off64 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off65 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off67 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off68 0 "Off" 1 "On" ;
+VAL_ 778 Stats_MCU_Last_Rst_Reas 0 "RST_UNKNOWN" 1 "RST_POWERON" 2 "RST_EXT" 3 "RST_SW" 4 "RST_PANIC" 5 "RST_INT_WDT" 6 "RST_TASK_WDT" 7 "RST_WDT" 8 "RST_DEEPSLEEP" 9 "RST_BROWNOUT" 10 "RST_SDIO" ;
+VAL_ 778 Alert_Off_On_Latch_Max74 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min74 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change74 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO74 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max75 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min75 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change75 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO75 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max77 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min77 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change77 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO77 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max78 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min78 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change78 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO78 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max80 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min80 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change80 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO80 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max81 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min81 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change81 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO81 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max83 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min83 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change83 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO83 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max84 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min84 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change84 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO84 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max86 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min86 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change86 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO86 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max87 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min87 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change87 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO87 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max89 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min89 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change89 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO89 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max90 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min90 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change90 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO90 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off92 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off93 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max99 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min99 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change99 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO99 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max100 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min100 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change100 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO100 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max102 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min102 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change102 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO102 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_Latch_Max103 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Min103 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_Latch_Change103 0 "Off" 1 "On" 2 "On - Latching" ;
+VAL_ 778 Alert_Off_On_IO103 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off108 0 "Off" 1 "On" ;
+VAL_ 778 Message_On_Off109 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Off_On_IO111 0 "Off" 1 "On" ;
+VAL_ 778 Accel_X_High_Trigger111 0 "Off" 1 "On" ;
+VAL_ 778 Accel_X_Low_Trigger111 0 "Off" 1 "On" ;
+VAL_ 778 Accel_Y_High_Trigger111 0 "Off" 1 "On" ;
+VAL_ 778 Accel_Y_Low_Trigger111 0 "Off" 1 "On" ;
+VAL_ 778 Accel_Z_High_Trigger111 0 "Off" 1 "On" ;
+VAL_ 778 Accel_Z_Low_Trigger111 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Latched111 0 "False" 1 "True" ;
+VAL_ 778 Alert_Off_On_IO112 0 "Off" 1 "On" ;
+VAL_ 778 Accel_X_High_Trigger112 0 "Off" 1 "On" ;
+VAL_ 778 Accel_X_Low_Trigger112 0 "Off" 1 "On" ;
+VAL_ 778 Accel_Y_High_Trigger112 0 "Off" 1 "On" ;
+VAL_ 778 Accel_Y_Low_Trigger112 0 "Off" 1 "On" ;
+VAL_ 778 Accel_Z_High_Trigger112 0 "Off" 1 "On" ;
+VAL_ 778 Accel_Z_Low_Trigger112 0 "Off" 1 "On" ;
+VAL_ 778 Alert_Latched112 0 "False" 1 "True" ;
+VAL_ 783 Fault_Accelerometer_Init 0 "OK" 1 "Fault" ;
+VAL_ 783 Fault_Accelerometer_Read 0 "OK" 1 "Fault" ;
+VAL_ 783 Fault_Accelerometer_Self_Test 0 "OK" 1 "Fault" ;
+

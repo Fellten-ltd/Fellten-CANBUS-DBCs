@@ -1,0 +1,699 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: GearECU DCDC Gauge DriveUnit CCS_Controller VCU ElconOBCharger BMS
+VAL_TABLE_ AmpsValue 7 "64A" 6 "32A" 5 "25A" 4 "16A" 3 "13A" 2 "10A" 1 "6A" 0 "0A" ;
+VAL_TABLE_ CableValue 4 "70A" 3 "32A" 2 "20A" 1 "13A" 0 "0A" ;
+VAL_TABLE_ ChargeState 6 "V2L Mode" 5 "Error" 4 "End Charge" 3 "Charge Stop" 2 "Charging" 1 "Plug Detected" 0 "Standby" ;
+VAL_TABLE_ LEDColour 3 "Blue" 2 "Green" 1 "Red" 0 "White" ;
+VAL_TABLE_ Sig_PTC_CAN_Timer 4 "PTC SHUTDOWN" 3 "WARN" 2 "WARN" 1 "OK" 0 "OK" ;
+VAL_TABLE_ PTC_Control_Select 3 "PTC Level 3" 2 "PTC Level 2" 1 "PTC Level 1" 0 "All Off" ;
+VAL_TABLE_ Vacuumswitch 1 "Vacuum Reached" 0 "Vacuum Not Reached" ;
+VAL_TABLE_ Charger1_InVoltage_Fault 1 "Input Voltage Error" 0 "Input Voltage Normal" ;
+VAL_TABLE_ DCDC_Control_Command 2 "Stop" 1 "Start" ;
+VAL_TABLE_ DCDC_Control_Command 2 "Stop" 1 "Start" ;
+VAL_TABLE_ DCDC_Protection_Command 0 "." 1 "Protection Confirmed" ;
+VAL_TABLE_ DCDC_warm 1 "Temp warning" 0 "Normal Temp" ;
+VAL_TABLE_ DCDConeErrorzeroNoError 1 "Error" 0 "No Error" ;
+VAL_TABLE_ DCDC_Ready 1 "Initialization complete" 0 "Initialization uncomplete" ;
+VAL_TABLE_ DCDC_Status 1 "Working" 0 "Not Working" ;
+VAL_TABLE_ DCDC_Hard_Fault 1 "Error" 0 "No Error" ;
+VAL_TABLE_ DCDC_CAN_error 1 "Error" 0 "No Error" ;
+VAL_TABLE_ DCDC_Fan_control 1 "Fan ON" 0 "Fan OFF" ;
+VAL_TABLE_ DCDC_Stop_EEROR 1 "Error" 0 "No Error" ;
+VAL_TABLE_ DCDC_Water_Fan 1 "Fan ON" 0 "Fan OFF" ;
+VAL_TABLE_ DCDC_HVIL_ERR 1 "Not Locked" 0 "Locked" ;
+VAL_TABLE_ Charer1_Starting_State 1 "Error HV Battery not detected" 0 "Charger detected battery" ;
+VAL_TABLE_ Charger1_Input_Voltage_Flag 1 "Incorrect volatge" 0 "Input voltage is normal" ;
+VAL_TABLE_ Charger_Temp_Flag 1 "Over Temperature Protection" 0 "Normal" ;
+VAL_TABLE_ Charger1_Hardware_Failure 1 "Hardware Failure" 0 "Normal" ;
+VAL_TABLE_ Charge_Control_Signal 1 "Stop Charging" 0 "Start Charging" ;
+VAL_TABLE_ stopchargeswitch 1 "Pressed" 0 "Not pressed" ;
+VAL_TABLE_ hvpresent 1 "HV Online" 0 "No" ;
+VAL_TABLE_ contactorstatus 1 "Closed" 0 "Open" ;
+VAL_TABLE_ Inletmotor 1 "Locked" 0 "Unlocked" ;
+VAL_TABLE_ Plugpresent 1 "Plug detected" 0 "No plug" ;
+VAL_TABLE_ YesNo 1 "Yes" 0 "No" ;
+VAL_TABLE_ Chargemode 1 "DC" 0 "AC" ;
+VAL_TABLE_ DUMode 1 "Sport" 0 "ECO / Normal" ;
+VAL_TABLE_ Gear 15 "Reverse" 1 "Forward" 0 "Neutral" ;
+VAL_TABLE_ Opmode 1 "Run" 0 "Off" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Output_Current : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Output_Voltage : 0|16@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ BatteryVoltage : 0|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ outputVoltage : 0|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ PrechargeEnable : 0|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ HVPresent : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CANCommsFault : 0|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ HVPreChargeFault : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Throttle2_Out : 0|12@1+ (1,0) [0|8190] "mV" Vector__XXX
+ SG_ Throttle2_In : 0|12@1+ (1,0) [0|8190] "mV" Vector__XXX
+ SG_ Throttle1_Out : 0|12@1+ (1,0) [0|8190] "mV" Vector__XXX
+ SG_ Throttle1_in : 0|12@1+ (1,0) [0|8190] "mV" Vector__XXX
+ SG_ PTC2_Reported_Temp : 0|16@1+ (1,-70) [0|0] "C" Vector__XXX
+ SG_ CC_V2L_Mode : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CCSDisabled : 0|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_221 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_220 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_218 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_217 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 860 BmsTempsAndVolts: 8 Vector__XXX
+ SG_ Pack_High_Temp : 48|16@1+ (0.1,0) [0|0] "C" Vector__XXX
+ SG_ Pack_Low_Temp : 32|16@1+ (0.1,0) [0|0] "C" Vector__XXX
+ SG_ Pack_High_Cell_Volt : 16|16@1+ (0.0001,0) [0|0] "V" Vector__XXX
+ SG_ Pack_Low_Cell_Volt : 0|16@1+ (0.0001,0) [0|0] "V" Vector__XXX
+
+BO_ 592 CAN_2_IO: 2 Vector__XXX
+ SG_ IO_Channel_12 : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_11 : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_10 : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_9 : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_8 : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_7 : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_6 : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_5 : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_4 : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_3 : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IO_Channel_1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1402 GearECU_Status3: 8 Vector__XXX
+ SG_ Throttle_Out_2 : 48|16@1+ (1,0) [0|0] "mV" Vector__XXX
+ SG_ Throttle_Out_1 : 32|16@1+ (1,0) [0|0] "mV" Vector__XXX
+ SG_ Throttle_In_2 : 16|16@1+ (1,0) [0|0] "mV" Vector__XXX
+ SG_ Throttle_In_1 : 0|16@1+ (1,0) [0|0] "mV" Vector__XXX
+
+BO_ 2365548071 Water_Valve_1_Input: 8 Vector__XXX
+ SG_ WaterValveInput : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566909312 Water_Valve_1_Feedback: 8 Vector__XXX
+ SG_ WaterValvePosition2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ WaterValvePosition1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1056 Charge_Controller: 8 Vector__XXX
+ SG_ ChargeStopButtonPressed : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargeEnable : 14|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargeState : 11|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ AmpsValue : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LEDColour : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CableValue : 3|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LockMotor : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1288 HVAC_Faults: 8 Vector__XXX
+ SG_ Control_CAN : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SSR_CAN_Fault : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PTC2_CAN_Fault : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PTC1_CAN_Fault : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SSR_Reported_Overcurrent : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PTC_Reported_Fault : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1287 HVAC_Feedback: 8 Vector__XXX
+ SG_ HVAC_PTC_PWM : 48|8@1+ (1,0) [0|0] "%" Vector__XXX
+ SG_ HVAC_Requested_Temp : 56|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ PTC1_Reported_Temp : 32|16@1+ (1,-70) [0|0] "C" Vector__XXX
+ SG_ SSR_Reported_Voltage : 24|8@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ SSR_Reported_Amperage : 16|8@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Valve2Pos : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ Valve1Pos : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 1280 HVAC_Control: 8 Vector__XXX
+ SG_ External_Override : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FanSpeedRequest : 16|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ HeatRequest : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ ValvePos : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 891 PedalIntercept: 8 Vector__XXX
+ SG_ Throttle_Mismatch : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Throttle2_Out : 44|12@1+ (2,0) [0|8190] "mV" Vector__XXX
+ SG_ Throttle2_In : 32|12@1+ (2,0) [0|8190] "mV" Vector__XXX
+ SG_ Throttle1_Out : 20|12@1+ (2,0) [0|8190] "mV" Vector__XXX
+ SG_ Throttle1_in : 8|12@1+ (2,0) [0|8190] "mV" Vector__XXX
+ SG_ ThrottlePercent : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ CalibrationMode : 56|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 462 PTC_Feedback: 8 Vector__XXX
+ SG_ PTC_PWM_Requested : 55|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ PTC_ModuleNumber : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ PTC_CAN_Timout : 39|8@0+ (1,0) [0|5] "" Vector__XXX
+ SG_ PTC_External_Temp : 23|16@0+ (1,-70) [-70|65465] "C" Vector__XXX
+ SG_ PTC_Internal_Temp : 15|8@0+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ PTC_Channel_Running : 7|8@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 461 PTC_Control: 8 Vector__XXX
+ SG_ PTC_1_PWM : 15|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ PTC_Select : 7|8@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1146 GearECU_Status2: 4 Vector__XXX
+ SG_ Throttle_Derate_Setpoint : 20|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ Throttle_Derate_Input : 8|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ Throttle_Derate_Factor : 0|8@1+ (0.004,0) [0|1.02] "" Vector__XXX
+
+BO_ 290 DU1Throttlerequest: 8 Vector__XXX
+ SG_ Regenrequest : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ThrottleRequest : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 890 GearECU_Status: 8 Vector__XXX
+ SG_ Throttle_Motor_Feedback : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Throttle_Difference : 24|16@1+ (1,0) [0|0] "mV" Vector__XXX
+ SG_ Throttle_Crosscheck_Fault : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Throttle_Out_Of_Bounds : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Throttle_Feedback_Missmatch : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GearECU_DUDerate : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gearecu_DCDCFault : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gear_shiftermissing : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gear_Mismatch : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Throttle_Mismatch : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Modeswitch_output : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Modeswitch_input : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Vacuum_switch : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Vacuum_pump : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Vacuum_error : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gearselector_reverse : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gearselector_neutral : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gearselector_drive : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gear_reverseout : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gear_driveoutput : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2550173648 DCDC_Control: 8 Vector__XXX
+ SG_ DCDC_Control_Command : 1|2@0+ (1,0) [0|3] ""  DCDC
+ SG_ DCDC_Protect_Command : 3|2@0+ (1,0) [0|3] ""  DCDC
+
+BO_ 2550255759 DCDC_Feedback: 8 DCDC
+ SG_ DCDC_Temperature : 63|8@0+ (0.1,0) [0|255] "C" Vector__XXX
+ SG_ DCDC_Warm_Temp : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_OverVoltage_outpur : 44|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_OverVoltage_Input : 42|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Over_Temp : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_LowVoltage_ouptut : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_LowVoltage_input : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_OverCurr_output : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Ready : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Status : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Hard_Fault : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_CAN_error : 35|1@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Stop_ERR : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Fan_control : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Water_Fan : 38|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_HVIL_ERR : 39|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Current : 23|16@0+ (0.1,0) [0|65535] "A" Vector__XXX
+ SG_ DCDC_Voltage : 7|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+
+BO_ 1553 Temperatures2: 8 Vector__XXX
+ SG_ Temp_Ambient : 16|16@1- (1,0) [-32768|32767] "Degrees" Vector__XXX
+ SG_ Temp_FrontPackReturn : 0|16@1- (1,0) [-32768|32767] "Degrees" Vector__XXX
+
+BO_ 1552 Temperatures1: 8 Vector__XXX
+ SG_ Temp_MotorRadOutlet : 48|16@1- (1,0) [-32768|32767] "Degrees" Vector__XXX
+ SG_ Temp_BattRadiatorOutlet : 32|16@1- (1,0) [-32768|32767] "Degrees" Vector__XXX
+ SG_ Temp_MotorRadInlet : 16|16@1- (1,0) [-32768|32767] "Degrees" Vector__XXX
+ SG_ Temp_BatteryRadiotorInlet : 0|16@1- (1,0) [-32768|32767] "Degrees" Vector__XXX
+
+BO_ 295 DU1Diagnostic: 8 Vector__XXX
+ SG_ DU_TMPHSLimit : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DU_AccelLimit : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DU_Freqlimit : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DU_IDCLimit : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DU_UDCLimit : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 528 LV12VBatteryStatus: 8 BMS
+ SG_ LV12VBatVoltage : 32|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+
+BO_ 292 GaugeStatus2: 5 Gauge
+ SG_ SOCDropAvg : 30|10@1+ (0.1,0) [0|102.3] "soc/10km" Vector__XXX
+ SG_ SOCDrop2 : 20|10@1+ (0.1,0) [0|102.3] "soc/10km" Vector__XXX
+ SG_ SOCDrop1 : 10|10@1+ (0.1,0) [0|102.3] "soc/10km" Vector__XXX
+ SG_ SOCDrop0 : 0|10@1+ (0.1,0) [0|102.3] "soc/10km" Vector__XXX
+
+BO_ 859 BmsStatus2: 4 BMS
+ SG_ BMSFlag_MPO4 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMSFlag_MPO3 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMSFlag_MPO2 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMSFlag_MPO1 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMSFlag_Chargeinterlock : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMSFlag_Dischargerelay : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMSFlag_Chargepower : 17|1@1+ (1,0) [0|1] ""  VCU
+ SG_ BMSFlag_Readypower : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IsolationADC : 0|16@1+ (0.001,0) [0|0] "v" Vector__XXX
+
+BO_ 291 GaugeStatus1: 8 Gauge
+ SG_ runningOdometer : 54|10@1+ (1,0) [0|1023] "meters" Vector__XXX
+ SG_ Odometer : 34|20@1+ (1,0) [0|1048575] "mi" Vector__XXX
+ SG_ kWused : 25|9@1+ (0.1,0) [0|51.1] "kwh" Vector__XXX
+ SG_ Consumption : 16|9@1+ (1,0) [0|511] "wh/mi" Vector__XXX
+ SG_ UI_Range : 8|8@1+ (1,0) [0|255] "miles" Vector__XXX
+ SG_ Range : 0|8@1+ (1,0) [0|255] "miles" Vector__XXX
+
+BO_ 874 CCSStatus: 8 CCS_Controller
+ SG_ Conditioned_Shutdown : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Weld_Detection_Fault : 51|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LinkCCFault : 50|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LinkHVPresent : 49|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LinkCCPresent : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Counter : 53|3@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BatteryVoltageSense : 23|16@0+ (0.1,0) [0|6553.5] "v"  BMS
+ SG_ CCSVoltageSense : 39|16@0+ (0.1,0) [0|6553.5] "v"  BMS
+ SG_ StopchargeSwitch : 15|1@1+ (1,0) [0|0] ""  BMS
+ SG_ InletFault : 14|1@1+ (1,0) [0|1] ""  BMS
+ SG_ HVPresent : 13|1@1+ (1,0) [0|1] ""  BMS
+ SG_ CCSContactorStatus : 12|1@1+ (1,0) [0|1] ""  BMS
+ SG_ InletMotor : 11|1@1+ (1,0) [0|1] ""  BMS
+ SG_ PlugPresent : 10|1@1+ (1,0) [0|1] ""  BMS
+ SG_ ChargeMode : 9|1@1+ (1,0) [0|1] ""  BMS
+ SG_ IncompatibleCCSCharger : 8|1@1+ (1,0) [0|1] ""  BMS
+ SG_ ChargeProtocolFault : 7|1@1+ (1,0) [0|1] ""  BMS
+ SG_ PTCTempFault : 6|1@1+ (1,0) [0|1] ""  BMS
+ SG_ CCSECUFault : 5|1@1+ (1,0) [0|1] ""  BMS
+ SG_ BMSFault : 4|1@1+ (1,0) [0|1] ""  BMS
+ SG_ BMSCommsFault : 3|1@1+ (1,0) [0|1] ""  BMS
+ SG_ HVILFault : 2|1@1+ (1,0) [0|1] ""  BMS
+ SG_ CCSContactorFault : 1|1@1+ (1,0) [0|1] ""  BMS
+ SG_ HVPreChargeFault : 0|1@1+ (1,0) [0|1] ""  BMS
+
+BO_ 855 BMSCCSCommands: 3 CCS_Controller
+ SG_ ACCurrentLimit : 8|16@1+ (1,0) [0|65535] ""  BMS
+ SG_ IsolationRelayOverride : 0|1@1+ (1,0) [0|1] ""  BMS
+
+BO_ 599 VehicleSpeed: 2 VCU
+ SG_ VehicleSpeed : 0|16@1- (0.1,0) [-3276.8|3276.7] "mph"  Gauge
+
+BO_ 293 DU1Feedback: 8 DriveUnit
+ SG_ DU1ThrottleTorqueRequest : 32|16@1- (1,0) [-32768|32767] "%/Nm" Vector__XXX
+ SG_ DU1ACCurrent : 48|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ DU1Voltage : 16|16@1+ (0.1,0) [0|6553.5] "Volts" Vector__XXX
+ SG_ DU1DCCurrent : 0|16@1- (0.1,0) [-3276.8|3276.7] "Amps" Vector__XXX
+
+BO_ 294 DU1Status: 8 DriveUnit
+ SG_ driveModeExtraSport : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DU1BrakeRegenLightRequest : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DU1Error : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DU1DrivePwrLimited : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DU1Mode : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DU1MotorTemp : 48|16@1- (1,0) [-32768|32767] "C" Vector__XXX
+ SG_ DU1InverterTemp : 32|16@1- (1,0) [-32768|32767] "C" Vector__XXX
+ SG_ DU1MotorSpeed : 16|16@1- (1,0) [-32768|32767] "RPM" Vector__XXX
+ SG_ DU1Gear : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DU1Opmode : 0|4@1- (1,0) [0|15] "" Vector__XXX
+
+BO_ 2550588916 ElconChargerControl: 8 Vector__XXX
+ SG_ Charge_Control_Signal : 39|8@0+ (1,0) [0|0] ""  ElconOBCharger
+ SG_ Max_Charging_Current : 23|16@0+ (0.1,0) [0|22.93725] "A"  ElconOBCharger
+ SG_ Max_Charge_Voltage : 7|16@0+ (0.1,0) [0|6.5535] "V"  ElconOBCharger
+
+BO_ 2566869221 ElconChargerFeedback: 8 ElconOBCharger
+ SG_ Charger1InputCurrent : 63|8@0+ (1,0) [0|255] "A" Vector__XXX
+ SG_ Charger1Temp : 47|8@0+ (1,-100) [-100|155] "degrees" Vector__XXX
+ SG_ Charger1InputVoltage : 55|8@0+ (2,0) [0|510] "vAC" Vector__XXX
+ SG_ Charger1Communication_State : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Charger1Starting : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Charger1InVoltageFault : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Charger1OverTemp : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Charger1HarwareFailure : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Charger1OutputCurrent : 23|16@0+ (0.1,0) [0|65.535] "A" Vector__XXX
+ SG_ Charger1OutputVoltage : 7|16@0+ (0.1,0) [0|65.535] "V" Vector__XXX
+
+BO_ 858 BmsErrors: 4 BMS
+ SG_ P0A06_ChgLimitEnforceFault : 31|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A05_InputPSUFault : 30|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0AA6_HVIsolationFault : 29|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0560_RedundantPSUFault : 28|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ U0100_ExternalComms : 27|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A9C_ThermistorFault : 26|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A81_FanMornitorFault : 25|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A02_WeakPackFault : 24|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A0F_CellASICFault : 23|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A0D_HighCell5VFault : 22|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0AC0_CurrentSensorFault : 21|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A04_OpenWiringFault : 20|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0AFA_LowCellVoltFault : 19|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU
+ SG_ P0A80_WeakCellFault : 18|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A12_CellBallanceOffFault : 17|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A1F_InternalCommsFault : 16|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A10_PackHotFault : 7|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A0E_LowCellFault : 6|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A0C_HighCellFault : 5|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A0B_IntSWFault : 4|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A0A_IntHeatsinkFault : 3|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A09_InternalHWFault : 2|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A08_ChgSafetyRelay : 1|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+ SG_ P0A07_DischgLimitEnforceFault : 0|1@1+ (1,0) [0|1] ""  CCS_Controller,VCU,Gauge
+
+BO_ 854 BmsStatus1: 6 BMS
+ SG_ HvBatteryTemp : 32|16@1- (0.1,0) [-3276.8|3276.7] "C"  CCS_Controller,VCU,Gauge
+ SG_ HvBatteryCurrent : 16|16@1- (0.1,0) [-3276.8|3276.7] "A"  CCS_Controller,VCU,Gauge
+ SG_ HvBatteryVoltage : 0|16@1+ (0.1,0) [0|655.35] "V"  CCS_Controller,VCU,Gauge
+
+BO_ 853 BmsSOC: 8 BMS
+ SG_ Total_Capacity : 48|16@1+ (0.1,0) [0|0] "Ah" Vector__XXX
+ SG_ HvBatterySOChighdef : 32|16@1+ (0.1,0) [0|100] "%"  Gauge
+ SG_ HvBatterySOH : 16|16@1+ (1,0) [0|65535] "%" Vector__XXX
+ SG_ HvBatterySOC : 0|16@1+ (1,0) [0|65535] "%"  CCS_Controller,VCU
+
+BO_ 849 BmsLimits: 8 BMS
+ SG_ DischargeCurrentLimit : 32|16@1+ (0.1,0) [0|65535] "A"  CCS_Controller,VCU
+ SG_ DischargeVoltageLimit : 48|16@1+ (0.1,0) [0|6553.5] "V"  CCS_Controller,VCU
+ SG_ ChargeCurrentLimit : 16|16@1+ (0.1,0) [0|6553.5] "A"  CCS_Controller,VCU
+ SG_ ChargeVoltageLimit : 0|16@1+ (0.1,0) [0|6553.5] "V"  CCS_Controller,VCU
+
+BO_TX_BU_ 599 : DriveUnit,VCU;
+BO_TX_BU_ 293 : VCU,DriveUnit;
+BO_TX_BU_ 294 : VCU,DriveUnit;
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 HVPresent "1 = Precharge ok, hv present
+0 = No HV Present";
+CM_ SG_ 874 InletFault "0 = OK
+1 = Fault";
+CM_ SG_ 874 HVPresent "1 = Precharge ok, hv present
+0 = No HV Present";
+CM_ SG_ 874 InletMotor "0 = Unlocked
+1 = Locked";
+CM_ SG_ 874 PlugPresent "0 = No Plug Present
+1 = Plug Present";
+CM_ SG_ 874 ChargeMode "0 = AC Charging
+1 = DC Fastcharge";
+CM_ SG_ 855 IsolationRelayOverride "0=BMS Isolation monitoring on
+1=BMS Isolation monitoring off";
+CM_ SG_ 854 HvBatteryCurrent "Negative current for charging";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagConnection" INT 0 65535;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "no","yes";
+BA_DEF_ BU_  "NmAsrNodeIdentifier" INT 0 255;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 536870911;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 0 65535;
+BA_DEF_  "NmAsrMessageCount" INT 0 256;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 0 65535;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "Baudrate" INT 0 10000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "NmAsrMessage" "no";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagConnection" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NodeLayerModules" "J1939_IL.dll";
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 50;
+BA_DEF_DEF_  "NmAsrNode" "yes";
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "NmAsrBaseAddress" 486506496;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 100;
+BA_DEF_DEF_  "NmAsrMessageCount" 64;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 400;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 1000;
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 750;
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "ProtocolType" "CAN";
+BA_ "BusType" "CAN";
+BA_ "DBName" "ZeroEv";
+BA_ "NmStationAddress" BU_ GearECU 8;
+BA_ "NmStationAddress" BU_ DCDC 7;
+BA_ "NmStationAddress" BU_ Gauge 6;
+BA_ "NmStationAddress" BU_ DriveUnit 3;
+BA_ "NmStationAddress" BU_ CCS_Controller 2;
+BA_ "NmStationAddress" BU_ VCU 5;
+BA_ "NmStationAddress" BU_ ElconOBCharger 4;
+BA_ "NmStationAddress" BU_ BMS 1;
+BA_ "VFrameFormat" BO_ 860 0;
+BA_ "VFrameFormat" BO_ 592 0;
+BA_ "VFrameFormat" BO_ 1402 0;
+BA_ "VFrameFormat" BO_ 2365548071 1;
+BA_ "VFrameFormat" BO_ 2566909312 1;
+BA_ "VFrameFormat" BO_ 1056 0;
+BA_ "VFrameFormat" BO_ 1288 0;
+BA_ "VFrameFormat" BO_ 1287 0;
+BA_ "VFrameFormat" BO_ 1280 0;
+BA_ "VFrameFormat" BO_ 891 0;
+BA_ "VFrameFormat" BO_ 462 0;
+BA_ "VFrameFormat" BO_ 461 0;
+BA_ "VFrameFormat" BO_ 1146 0;
+BA_ "VFrameFormat" BO_ 290 0;
+BA_ "GenMsgCycleTimeFast" BO_ 890 0;
+BA_ "GenMsgCycleTime" BO_ 890 100;
+BA_ "VFrameFormat" BO_ 890 0;
+BA_ "VFrameFormat" BO_ 2550173648 1;
+BA_ "VFrameFormat" BO_ 2550255759 1;
+BA_ "GenMsgSendType" BO_ 1553 0;
+BA_ "GenMsgCycleTime" BO_ 1553 250;
+BA_ "VFrameFormat" BO_ 1553 0;
+BA_ "GenMsgSendType" BO_ 1552 0;
+BA_ "GenMsgCycleTime" BO_ 1552 250;
+BA_ "VFrameFormat" BO_ 1552 0;
+BA_ "VFrameFormat" BO_ 295 0;
+BA_ "VFrameFormat" BO_ 528 0;
+BA_ "VFrameFormat" BO_ 292 0;
+BA_ "VFrameFormat" BO_ 859 0;
+BA_ "GenMsgCycleTime" BO_ 859 500;
+BA_ "GenMsgSendType" BO_ 859 0;
+BA_ "VFrameFormat" BO_ 291 0;
+BA_ "GenMsgCycleTime" BO_ 291 3000;
+BA_ "GenMsgSendType" BO_ 291 0;
+BA_ "GenMsgSendType" BO_ 874 0;
+BA_ "GenMsgCycleTime" BO_ 874 500;
+BA_ "VFrameFormat" BO_ 874 0;
+BA_ "GenMsgSendType" BO_ 855 0;
+BA_ "GenMsgCycleTime" BO_ 855 200;
+BA_ "VFrameFormat" BO_ 855 0;
+BA_ "GenMsgSendType" BO_ 599 0;
+BA_ "GenMsgCycleTime" BO_ 599 50;
+BA_ "VFrameFormat" BO_ 599 0;
+BA_ "VFrameFormat" BO_ 293 0;
+BA_ "GenMsgSendType" BO_ 293 0;
+BA_ "GenMsgCycleTime" BO_ 293 100;
+BA_ "VFrameFormat" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "VFrameFormat" BO_ 2550588916 1;
+BA_ "GenMsgSendType" BO_ 2566869221 0;
+BA_ "GenMsgCycleTime" BO_ 2566869221 200;
+BA_ "VFrameFormat" BO_ 2566869221 1;
+BA_ "GenMsgSendType" BO_ 858 0;
+BA_ "GenMsgCycleTime" BO_ 858 500;
+BA_ "VFrameFormat" BO_ 858 0;
+BA_ "GenMsgSendType" BO_ 854 0;
+BA_ "GenMsgCycleTime" BO_ 854 100;
+BA_ "VFrameFormat" BO_ 854 0;
+BA_ "GenMsgSendType" BO_ 853 0;
+BA_ "GenMsgCycleTime" BO_ 853 100;
+BA_ "VFrameFormat" BO_ 853 0;
+BA_ "GenMsgSendType" BO_ 849 0;
+BA_ "GenMsgCycleTime" BO_ 849 100;
+BA_ "VFrameFormat" BO_ 849 0;
+BA_ "GenSigStartValue" SG_ 3221225472 PTC2_Reported_Temp 70;
+BA_ "GenSigStartValue" SG_ 1287 PTC1_Reported_Temp 70;
+BA_ "GenSigStartValue" SG_ 462 PTC_External_Temp 70;
+BA_ "GenSigStartValue" SG_ 462 PTC_Internal_Temp 40;
+BA_ "GenSigStartValue" SG_ 2566869221 Charger1Temp 100;
+VAL_ 3221225472 HVPresent 1 "HV Online" 0 "No" ;
+VAL_ 3221225472 HVPreChargeFault 1 "Yes" 0 "No" ;
+VAL_ 3221225472 CC_V2L_Mode 1 "Yes" 0 "No" ;
+VAL_ 1056 ChargeStopButtonPressed 1 "Yes" 0 "No" ;
+VAL_ 1056 ChargeEnable 1 "Yes" 0 "No" ;
+VAL_ 1056 ChargeState 6 "V2L Mode" 5 "Error" 4 "End Charge" 3 "Charge Stop" 2 "Charging" 1 "Plug Detected" 0 "Standby" ;
+VAL_ 1056 AmpsValue 7 "64A" 6 "32A" 5 "25A" 4 "16A" 3 "13A" 2 "10A" 1 "6A" 0 "0A" ;
+VAL_ 1056 LEDColour 3 "Blue" 2 "Green" 1 "Red" 0 "White" ;
+VAL_ 1056 CableValue 4 "70A" 3 "32A" 2 "20A" 1 "13A" 0 "0A" ;
+VAL_ 1288 Control_CAN 1 "Yes" 0 "No" ;
+VAL_ 1288 SSR_CAN_Fault 1 "Yes" 0 "No" ;
+VAL_ 1288 PTC2_CAN_Fault 1 "Yes" 0 "No" ;
+VAL_ 1288 PTC1_CAN_Fault 1 "Yes" 0 "No" ;
+VAL_ 1288 SSR_Reported_Overcurrent 1 "Yes" 0 "No" ;
+VAL_ 1288 PTC_Reported_Fault 1 "Yes" 0 "No" ;
+VAL_ 1280 External_Override 1 "Yes" 0 "No" ;
+VAL_ 891 Throttle_Mismatch 1 "Yes" 0 "No" ;
+VAL_ 891 CalibrationMode 1 "Yes" 0 "No" ;
+VAL_ 462 PTC_CAN_Timout 4 "PTC SHUTDOWN" 3 "WARN" 2 "WARN" 1 "OK" 0 "OK" ;
+VAL_ 462 PTC_Channel_Running 3 "PTC Level 3" 2 "PTC Level 2" 1 "PTC Level 1" 0 "All Off" ;
+VAL_ 461 PTC_Select 3 "PTC Level 3" 2 "PTC Level 2" 1 "PTC Level 1" 0 "All Off" ;
+VAL_ 890 Throttle_Crosscheck_Fault 1 "Yes" 0 "No" ;
+VAL_ 890 Throttle_Out_Of_Bounds 1 "Yes" 0 "No" ;
+VAL_ 890 Throttle_Feedback_Missmatch 1 "Yes" 0 "No" ;
+VAL_ 890 GearECU_DUDerate 1 "Yes" 0 "No" ;
+VAL_ 890 Gearecu_DCDCFault 1 "Yes" 0 "No" ;
+VAL_ 890 Gear_shiftermissing 1 "Yes" 0 "No" ;
+VAL_ 890 Gear_Mismatch 1 "Yes" 0 "No" ;
+VAL_ 890 Throttle_Mismatch 1 "Yes" 0 "No" ;
+VAL_ 890 Modeswitch_output 1 "Yes" 0 "No" ;
+VAL_ 890 Modeswitch_input 1 "Yes" 0 "No" ;
+VAL_ 890 Vacuum_switch 1 "Vacuum Reached" 0 "Vacuum Not Reached" ;
+VAL_ 890 Vacuum_pump 1 "Yes" 0 "No" ;
+VAL_ 890 Vacuum_error 1 "Yes" 0 "No" ;
+VAL_ 890 Gearselector_reverse 1 "Yes" 0 "No" ;
+VAL_ 890 Gearselector_neutral 1 "Yes" 0 "No" ;
+VAL_ 890 Gearselector_drive 1 "Yes" 0 "No" ;
+VAL_ 890 Gear_reverseout 1 "Yes" 0 "No" ;
+VAL_ 890 Gear_driveoutput 1 "Yes" 0 "No" ;
+VAL_ 2550173648 DCDC_Control_Command 2 "Stop" 1 "Start" ;
+VAL_ 2550173648 DCDC_Protect_Command 0 "." 1 "Protection Confirmed" ;
+VAL_ 2550255759 DCDC_Warm_Temp 1 "Temp warning" 0 "Normal Temp" ;
+VAL_ 2550255759 DCDC_OverVoltage_outpur 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_OverVoltage_Input 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_Over_Temp 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_LowVoltage_ouptut 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_LowVoltage_input 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_OverCurr_output 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_Ready 1 "Initialization complete" 0 "Initialization uncomplete" ;
+VAL_ 2550255759 DCDC_Status 1 "Working" 0 "Not Working" ;
+VAL_ 2550255759 DCDC_Hard_Fault 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_CAN_error 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_Stop_ERR 1 "Error" 0 "No Error" ;
+VAL_ 2550255759 DCDC_Fan_control 1 "Fan ON" 0 "Fan OFF" ;
+VAL_ 2550255759 DCDC_Water_Fan 1 "Fan ON" 0 "Fan OFF" ;
+VAL_ 295 DU_TMPHSLimit 1 "Yes" 0 "No" ;
+VAL_ 295 DU_AccelLimit 1 "Yes" 0 "No" ;
+VAL_ 295 DU_Freqlimit 1 "Yes" 0 "No" ;
+VAL_ 295 DU_IDCLimit 1 "Yes" 0 "No" ;
+VAL_ 295 DU_UDCLimit 1 "Yes" 0 "No" ;
+VAL_ 874 Conditioned_Shutdown 1 "Yes" 0 "No" ;
+VAL_ 874 Weld_Detection_Fault 1 "Yes" 0 "No" ;
+VAL_ 874 LinkCCFault 1 "Yes" 0 "No" ;
+VAL_ 874 LinkHVPresent 1 "HV Online" 0 "No" ;
+VAL_ 874 LinkCCPresent 1 "Yes" 0 "No" ;
+VAL_ 874 StopchargeSwitch 1 "Pressed" 0 "Not pressed" ;
+VAL_ 874 InletFault 1 "Yes" 0 "No" ;
+VAL_ 874 HVPresent 1 "HV Online" 0 "No" ;
+VAL_ 874 CCSContactorStatus 1 "Closed" 0 "Open" ;
+VAL_ 874 InletMotor 1 "Locked" 0 "Unlocked" ;
+VAL_ 874 PlugPresent 1 "Plug detected" 0 "No plug" ;
+VAL_ 874 ChargeMode 1 "DC" 0 "AC" ;
+VAL_ 874 IncompatibleCCSCharger 1 "Yes" 0 "No" ;
+VAL_ 874 ChargeProtocolFault 1 "Yes" 0 "No" ;
+VAL_ 874 PTCTempFault 1 "Yes" 0 "No" ;
+VAL_ 874 CCSECUFault 1 "Yes" 0 "No" ;
+VAL_ 874 BMSFault 1 "Yes" 0 "No" ;
+VAL_ 874 BMSCommsFault 1 "Yes" 0 "No" ;
+VAL_ 874 HVILFault 1 "Yes" 0 "No" ;
+VAL_ 874 CCSContactorFault 1 "Yes" 0 "No" ;
+VAL_ 874 HVPreChargeFault 1 "Yes" 0 "No" ;
+VAL_ 294 DU1BrakeRegenLightRequest 1 "Yes" 0 "No" ;
+VAL_ 294 DU1Error 1 "Yes" 0 "No" ;
+VAL_ 294 DU1DrivePwrLimited 1 "Yes" 0 "No" ;
+VAL_ 294 DU1Mode 1 "Sport" 0 "ECO / Normal" ;
+VAL_ 294 DU1Gear 15 "Reverse" 1 "Forward" 0 "Neutral" ;
+VAL_ 294 DU1Opmode 1 "Ready for drive" 0 "Standby" ;
+VAL_ 2550588916 Charge_Control_Signal 1 "Stop Charging" 0 "Start Charging" ;
+VAL_ 2566869221 Charger1Communication_State 1 "Yes" 0 "No" ;
+VAL_ 2566869221 Charger1Starting 1 "Error HVBattery not detected" 0 "Charger detected battery" ;
+VAL_ 2566869221 Charger1InVoltageFault 1 "Input Voltage Error" 0 "Input Voltage Normal" ;
+VAL_ 2566869221 Charger1OverTemp 1 "Over Temperature Protection" 0 "Normal" ;
+VAL_ 2566869221 Charger1HarwareFailure 1 "Hardware Failure" 0 "Normal" ;
+
